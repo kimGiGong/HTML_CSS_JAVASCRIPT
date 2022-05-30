@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 표만드는 태그
+        table 은 행(row)와 열(column) 으로 이루어져 있다.
+        table : 테이블의 영역을 묶는 태그
+        tr : 행을 지정 (가로줄, row)
+        td : 셀 만들기 (세로 한칸,column)
+        th : 제목 셀
+         
+        table 태그 안에 행의 수만큼 <tr>태그를 넣고
+        각 tr태그 안에 열의 수만큼 <td> 태그를 만든다.     
+        
+        행/열 합치기
+        : 셀을 합치는 것이므로 td에 적용
+        
+        colspan 속성 : 열 합치기 colspan="합칠 열의 갯수"
+        rowspan 속성 : 행 합치기 rowspan="할칠 행의 갯수"
+        
+-->
+
+    <table border="1">
+        <tr>
+            <th rowspan="2">1행 1열</th>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td colspan="2">2행 2열</td>
+        </tr>
+    </table>
+
+</body>
+</html>

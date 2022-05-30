@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <!-- 폼 관련 태그 
+        사용자가 웹사이트로 정보를 보낼 수 있는 요소들을 폼이라 한다.
+        
+        - form 태그
+            <form 속성="값"....> 여러 폼 요소 태그....</form>
+        - form 태그 속성
+            action : 사용자가 입력한 내용을 서버쪽으로 보내 처리해줄때
+                    서버에서 사용할 경로(필수)
+            method : 사용자가 입력한 내용들을 서버쪽으로 어떻게 넘겨줄지 전송방식 지정
+                    get  : 브라우저 주소창에 사용자가 입력한 내용들이 그대로 드러남
+                    post : 입력내용이 주소창에 드러나지 않아고 내부에 담아 전송, 길이 제한X
+            name   : 폼태그에 이름 붙혀주는 속성. form 태그 여러개면 구분하기 위해.
+            target : action에 지정한 경로를 현재 창이 아닌 다른 위치에 열도록 지정
+            autocomplete : 자동완성기능
+            
+        - input 태그
+                : 홑태그로 폼태그 안에서 사용자가 입력하는 뷰뷴울 만들때 주로 사용
+                한줄 글자, 체크박스, 로그인 버튼 등 여러 타입 존재
+                
+                * type 속성의 속성값
+                 text : 한줄짜리 텍스트 입력할 수 있는 텍스트 상자 생성
+                 hidden : 화면상에는 보이지 않지만, 
+                         서버로 전송할 때 함께 숨겨서 데이터를 전송하고 싶을때 사용
+                         value 속성에 넘길 데이터를 적어주어야한다!!
+                 password : 비밀번호 입력란에 작성한 내용이 * . 으로 표시됨 
+                 radio : name 속성으로 묶어서 한개의 항목만 선택하게 할때 주로 사용(체크해제 불가능)
+                         선택했을때 value 속성에 넘길 데이터를 적어주어야한다!!
+                         같은 name속성 중 한개만 선택된다.
+                 checkbox : 두개 이상의 여러가지 선택 가능
+                 color : 색상 선택 상자
+                 date, month, week : 날짜(년,월,일), 월 년, 주 년 선택 (브라우저 확인)
+                 time, datetime, datetime-local : 시간, 날짜 등 선택
+                 reset : 입력된 모든 정보 초기화. value에 지정된 값이 버튼에 표시됨.
+                 sumit : 사용자가 입력한 정보를 서버로 전송시키는 버튼.
+                         value에 지정한것이 버튼에 표기.
+                 image : 이미지 버튼. sumit과 같은 기능. src속성 기입
+                 file : 파일 첨부시(웹과정에서 자세히)
+                 
+                     * input의 다른 속성
+                     autofocus : 입력 커서 자동으로 표시되게 
+                     placeholder : 입력박스에 기입할 내용 힌트로 표시하기
+                     readonly : 읽기 전용
+                     required : 필수 기입 요소로 지정
+                 
+                 min, max, step : 최대값, 최솟값, 간격 (숫자 조건)
+                 size, minlength, maxlength : 길이, 최소길이, 최대길이 (텍스트 관련 조건)
+                 
+            
+    -->
+    
+    <form action="html08_action.html" method="get">
+        <input type="text" name="txt" size="10" value="haha"/> <br />
+        <input type="hidden" name="hiddenVal" value="100"/> <br />
+        <input type="password" name="pw" /> <br />
+        get방식으로 넘어간 데이터 (주소창에서 나온다) <br>
+        html/html08_action.html?txt=haha&hiddenVal=100&pw=1234 <br>
+        <input type="submit" value="검색"><br>
+        <input type="radio" name="subject" value="JAVA" checked>JAVA <br>
+        <input type="radio" name="subject" value="Spring">Spring <br>
+        <input type="radio" name="subject3" value="HTML">html <br>
+        <input type="radio" name="subject3" value="CSS">css <br>
+        <input type="radio" name="subject3" value="JAVASCRIPT">javascript <br>
+        
+        <input type="checkbox" name="subject3" value="HTML"checked>html <br>
+        <input type="checkbox" name="subject3" value="CSS">css <br>
+        <input type="checkbox" name="subject3" value="JAVASCRIPT">javascript <br>
+        
+        <input type="color" name="color"><br>
+        <input type="date" name="date"><br>
+        <input type="month" name="month"><br>
+        <input type="week" name="week"><br>
+        <input type="time" name="time" value="09:00"><br>
+        <input type="datetime-local" name="local" value="2022-05-29T21:00"><br>
+        <input type="reset" value="reset"> 디폴트로 리셋<br>
+        <input type="image" src="img/cat.jpg" width="30%">억울하냐? <br>
+        <input type="button" value="새창 열기" onclick="window.open()"> <br>
+        <input type="file" name="upload"><br>
+        
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
