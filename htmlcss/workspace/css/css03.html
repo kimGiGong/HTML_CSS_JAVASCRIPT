@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selcetor</title>
+    <style>
+        #pp p {color : tomato;}                    /* 하위 선택자 ' ':띄어쓰기 */
+        #container>ul {border: 1px solid red;}     /* 자식 선택자 '>':꺽세 손자까진X */
+        #headL1+ul {color :blue; font-weight: bold;} /* 인접 형제 선택자 '+' 가까운 아랫동생만 선택 */
+        #headL2~ul {color :blue; font-weight: bold;} /* 형제 선택자 '~' 모든 아랫동생 선택 */
+        
+    </style>
+</head>
+<body>
+    <br>/ --------------------------------------------------------------------- /<br>
+    
+    <h1>Hello css</h1>
+    <p>content 1</p>
+    <div id=pp>
+        <p>content 2</p>
+        <p>content 3</p>
+    </div>
+    <p>content 4</p>
+   
+   <br>/ -------------------------------------------------------------------------/<br>
+   
+   <div id="container">
+       <h1>Hello CSS in container</h1>
+       <ul>
+           <li>list1
+               <ul>
+                   <li>list1-1</li>
+                   <li>list1-2</li>
+               </ul>
+           </li>
+           <li>list2
+               <ul>
+                   <li>list2-1</li>
+                   <li>list2-2</li>
+                   <li>list2-3</li>
+                   <li>list2-4</li>
+               </ul>
+           </li>
+       </ul>
+   </div>
+   
+   <br>/ -------------------------------------------------------------------------/<br>
+   
+   
+   <ul>
+       <li>list1-1</li>
+       <li>list1-2</li>
+   </ul>
+   <h1 id=headL1>Hello CSS</h1>
+   <ul>
+       <li>list2-1</li>
+       <li>list2-2</li>
+   </ul>
+   <ul>
+       <li>list3-1</li>
+       <li>list3-2</li>
+       <li>list3-3</li>
+   </ul>
+   
+   <br>/ -------------------------------------------------------------------------/<br>
+   
+   
+   <ul>
+       <li>list1-1</li>
+       <li>list1-2</li>
+   </ul>
+   <h1 id=headL2>Hello CSS</h1>
+   <ul>
+       <li>list2-1</li>
+       <li>list2-2</li>
+   </ul>
+   <ul>
+       <li>list3-1</li>
+       <li>list3-2</li>
+       <li>list3-3</li>
+   </ul>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+</body>
+</html>

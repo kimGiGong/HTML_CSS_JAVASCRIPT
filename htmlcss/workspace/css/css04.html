@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul {list-style: none;}
+        li { display : inline ; margin: 10px;}
+        a {text-decoration: none; font-size: 30px;  padding: 5px;}
+        #aa a[href] {background-color: yellow; }
+        #aa a[target="_blank"]{background-color: turquoise;}
+        #aa a[class^="js"]{background-color: blue;}
+        #aa a[class$="a"]{color: red;}
+        #aa a[class*="s"]{color : white;}
+        
+        
+        #bb a:link {color : black;}
+        #bb a:visited {color : turquoise;}
+        #bb a:hover {background-color: yellow;}
+        #bb a:active{color: magenta;}
+        #bb a:focus{background-color: lightblue;}
+        
+    </style>
+</head>
+<body>
+
+    <ul id="aa">
+        <li><a>Main menu : </a></li>
+        <li><a href="http://naver.com" target="_blank" class="java">naver</a></li>
+        <li><a href="http://google.com" class="jsp">google</a></li>
+        <li><a href="http://daum.net" class="spring">daum</a></li>
+    </ul>
+<br>/ ------------------------------------------------------------------------------------ / <br>       
+    <ul id="bb">
+        <li><a>Main menu : </a></li>
+        <li><a href="http://naver.com">naver</a></li>
+        <li><a href="http://google.com">google</a></li>
+        <li><a href="http://daum.net">daum</a></li>
+    </ul>        
+                
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                        
+</body>
+</html>
