@@ -1,2 +1,95 @@
 /* CSS 파일 */
 h1 { background-color: aqua;}
+*{
+    box-sizing: border-box; /* width = 컨텐츠 +padding + border두께 */
+}
+body {
+    /* 상하 여백 0, 좌우 auto는 중앙배치 (width지정해야 적용됨)*/
+    margin: 0 auto;
+    color: #3d3d3c; /* 전체 글씨 색*/
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+}
+/* 중앙배치를 위한 css */
+.inner{
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+/*    background-color: orange;*/
+    width : 100%;
+    height: 60px;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+    position: fixed; /* 위치고정 */
+    z-index: 1000;
+}
+.header-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.header-text{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+}
+/* section 태그 모두에게 달기 */
+section {
+/*    background-color: aqua;*/
+    width:100%;
+    position:relative;
+}
+/* section에 클래스 속성 main이라고 달아둔것 */
+.main {
+    height: 360px;
+    background-image: url(image1.png);
+}
+.title-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FFF;
+}
+.message{
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #FFF;
+}
+.section1{
+    width: 100%;
+    height: 400px;
+}
+
+footer{
+/*    background-color: magenta;*/
+    margin: 2rem 0 ;
+}
+.footer-container {
+    display: flex;
+    justify-content: column;
+}
+.footer-text {
+    font-size: 0.5rem;
+}
+.footer-email {
+    font-size: 0.5rem;
+}
+
+@media screen and (min-width: 120px) {
+    .inner {
+        max-width : 1200px;
+    }
+}

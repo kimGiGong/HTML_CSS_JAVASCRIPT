@@ -6,6 +6,8 @@
     <style>
         
         #login {
+            width: 15rem;
+            height: 8rem;
             border:1px solid;
             border-top-right-radius: 3% 5%;
             border-top-left-radius: 3% 5%;
@@ -14,10 +16,24 @@
             
             margin: 0 auto;
         }
-        input[name="userID"]{
-            width: auto;
+        td {
+            padding-left: 2%;
         }
-        input[value="로그인"]{width: 10.65rem;}
+        input[name="userID"]{
+            width: 95%;
+        }
+        input[name="userPW"]{
+            width: 95%;
+        }
+        input[value="로그인"]{
+            width: 98.65%;
+            background-color: greenyellow;
+            border: 1px solid;
+            border-top-right-radius: 1.8% 18%;
+            border-top-left-radius: 1.8% 18%;
+            border-bottom-right-radius: 1.8% 18%;
+            border-bottom-left-radius: 1.8% 18%;
+        }
         #util>td {font-size: 0.1rem;}
        
         #util>td>a{
@@ -35,7 +51,7 @@
              <td colspan="3"><input type="text" name="userID" required placeholder="아이디" autofocus></td>
            </tr>
            <tr>
-             <td colspan="3"><input type="text" name="userPW" required placeholder="비밀번호"></td>
+             <td colspan="3"><input type="password" name="userPW" required placeholder="비밀번호"></td>
            </tr>
            <tr>
              <td colspan="3"><input type="submit" value="로그인"></td>
