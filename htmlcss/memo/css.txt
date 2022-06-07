@@ -285,7 +285,7 @@
 		pixel : 화소
 		viewport : 화면상 표시 영역.
 		meta viewport : 원하는 너비를 넣으면, 해당 너비에 맞게 브라우저가 표시함.
-			<meta name="viewport" content"width="320">
+			<meta name="viewport" content="width="320">
 
 			-> 다양한 디스플레이에 맞는 웹페이지 구현
 	1) html		<meta name="viewport" content="width=device-width">
@@ -316,7 +316,7 @@
 		@media screen and (max-width: 1200px) { ..... }
 	
 		// 브라우저 화면, 1200px 이상, 디바이스가 가로방향일때만 css 적용
-		@media screen and (max-width: 1200px) and (orientation: landscape ){ ..... }
+		@media screen and (min-width: 1200px) and (orientation: landscape ){ ..... }
 
 9. CSS Flexbox
 
