@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //  자동 형변환
+        var a= "30";
+        var res = 1+a+10;
+        console.log(res);
+        
+        res = 2+true;
+        console.log(res);
+        res = "2"+true;
+        console.log(res);
+        
+        //  강제형변환
+        //  문자->숫자
+        var num = "123.456";
+        res = parseInt(num);    // 정수로 형변환 (소수점X)
+        console.log(res);
+        res= Number(num);       // 숫자로 형변환 (소수점 o/x)
+        console.log(res);
+        
+        res = parseFloat(num);  //  실수로 형변환
+        console.log (res);
+        
+        //  숫자 -> 문자
+        var num2 = 15;
+        res= String(num2);
+        console.log(res);
+        console.log(typeof res);
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>

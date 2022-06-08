@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var age = prompt("당신의 나이는?");   //  문자열로 리턴함
+        console.log(age);
+        console.log(age+1);                 //  출력 age1
+        
+        
+        // if문
+        if(age<100){
+            console.log("100보다 작다.")
+        }else if(age>100){
+            console.log("100보다 크거나 같다")
+        }else{
+            console.log("100 이다.")
+        }
+        
+        // switch문
+        var num2 = prompt("정수 입력",1);
+        switch(num2){
+            case "1":
+                console.log("입력 1");
+                break;
+            case "2":
+                console.log("입력 2");
+                break;
+            default:
+                console.log("1과 2가 아닌 숫자입력받음");
+        }
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

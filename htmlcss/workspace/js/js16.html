@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const user = { name: "pika", age:10 };
+        console.log(user);      //  중괄호로 묶이면 객체
+        console.log(user.age);      
+        console.log(user.name);      
+        
+        console.log(user.test); // 없는 프로퍼티 읽으려하면 undefined 리턴.
+        
+        //  빈 객체 만들기
+        let obj = {};
+        
+        //  프로퍼티 추가, 삭제
+        
+        obj.addr= "서울시 서초구"
+        console.log(obj);
+        delete obj.addr;
+        console.log(obj);
+        
+        // in 연산자로 프로퍼티 있는지 확인
+        // in 연산자로 프로퍼티 있는지 확인
+        console.log("name" in user);
+        console.log("test" in user);
+        console.log("toString" in user);
+        
+        
+    
+    </script>
+</body>
+</html>

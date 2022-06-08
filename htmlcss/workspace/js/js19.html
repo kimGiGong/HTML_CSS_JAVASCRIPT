@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name ,age){
+            console.log("Person 객체생성");
+            this.name = name;
+            this.age = age;
+        }
+        
+        const pika = new Person("pikaka",10);
+        console.log(pika);
+        
+        class Person1 {
+            constructor(name){
+                console.log("hello");
+                this.name = name;
+            }
+        }
+        class Student extends Person1{
+            constructor(name, age){
+                super(name);
+                this.age = age;
+            }
+        }
+        
+        const p = new Person1("kobugi");
+        console.log(p);
+        const stu = new Student("kobugi",200);
+        console.log(stu);
+        
+        
+        
+        
+    
+    </script>
+</body>
+</html>

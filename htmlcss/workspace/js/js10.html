@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // 함수를 변수에 담을 수 있다.
+        function hello (name){
+            console.log ("hello~~`"+name);
+        }
+        
+        var func = hello;
+        func("피카츄");
+    
+        // 함수를 매개변수에 담을 수 있다.
+    
+        function hello1() {
+            console.log ("hello!!") 
+        }
+        function hello2() {
+            console.log ("hello2222") 
+        }
+        
+        function execute (func){
+            func();
+        }
+        
+        execute(hello1);
+        execute(hello2);
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

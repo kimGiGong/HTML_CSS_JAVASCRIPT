@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script>
+        test();
+        
+        hello();
+        
+        function hello(){       // 호이스팅 기법 일반함수
+            console.log("hello");
+        }
+        
+        
+        var hello2 =function (){       // 리터럴 함수 호이스팅X
+            console.log("123456");
+        }
+        hello2(); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

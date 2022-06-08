@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 전역 변수
+        var num = 10;
+    
+        function test () {
+            console.log ("function : "+ num);
+            num = 20;
+            console.log ("function : "+ num);
+            // 지역변수
+            var num = 100;
+            console.log ("function: "+num); // 지역 num 100 출력 : 우선순위 지역> 전역
+        }
+        test();
+        
+        console.log (num);
+        
+        
+        
+        
+        
+        
+        
+    
+    </script>
+</body>
+</html>

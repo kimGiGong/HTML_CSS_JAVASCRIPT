@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //console.log(a);
+        
+    // a = 10;  //  전역변수로 선언+대입 해줌  // 이게 되네;; (타입없음)
+    // console.log(a);  
+        
+    var a = "global";
+    function f(){
+        a ="local";      // 함수 안에서 var 생략하면 전역으로 선언됨.
+        console.log("f : "+a);
+    }
+    f();    
+        
+    console.log(a);    
+        
+        
+        
+    
+    </script>
+</body>
+</html>

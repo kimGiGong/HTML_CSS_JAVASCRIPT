@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+    // var : 함수 스코프
+        var foo = "문자문자";
+        if(typeof foo == "string"){
+            var result = true;
+        }else{
+            var result = false;
+        }
+        console.log(result);    //  함수 밖인데 사용가능
+        
+    // let , const : 블록 스코프    
+        var foo = "문자문자";
+        if(typeof foo == "string"){
+            let result1 = true;
+        }else{
+            const result1 = false;
+        }
+        console.log(result1);       //  에러!! 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    </script>
+</body>
+</html>

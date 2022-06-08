@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function getHello(){
+            function hello(user){
+                console.log(user+"님이 방문");
+            }
+            return hello;   // 함수 이름을 리턴
+        }
+    
+        var result = getHello();        // 함수를 리턴받아 변수에 저장
+        result("홍길동");
+    
+    
+    
+    </script>
+    
+</body>
+</html>

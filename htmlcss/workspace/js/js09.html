@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function func (){
+            console.log ("전역함수!!");
+        }
+        
+        // 전역
+        function outerFunc(){
+            // 지역 함수
+            function innerFunc(){
+                console.log("지역함수~~")
+            }
+            innerFunc();
+        }
+        func();
+        outerFunc();
+    </script>
+</body>
+</html>
