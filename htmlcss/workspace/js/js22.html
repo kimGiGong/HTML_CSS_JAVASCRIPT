@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+   <button onclick="window.clearInterval(inter)">정지</button>
+   <button onclick="window.clearTimeout(out)">타임아웃</button>
+   
+   
+   
+    <script>
+        
+        window.open("http://naver.com", "네이버어","width=50, height=100, left=50,top=50, location=no,scrolbar=no,            status=no");
+    
+        window.open("js22pop.html","popup","width=300,height=300, left=100, top=100,location=no");
+    
+        let result = window.confirm("지금 수업 재밌?");
+        console.log(result);
+    
+        let num = 0;
+        let inter = window.setInterval(function(){
+            num++;
+            console.log(num);
+        },1000);
+    
+        let num2 =0;
+        let out = window.setTimeout(function(){
+            console.log("타임아웃!!");
+        },5000)
+        
+        
+        
+    </script>
+</body>
+</html>

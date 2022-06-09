@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button class="btn"> 클릭 </button>
+    
+    <button onclick="clickFunc()"> 클릭2 </button>
+    
+    <script>
+        
+        function clickFunc(){
+            for(let i = 0; i<10 ; i++){
+                if(i%2==0){
+                console.log("helloooooooooooooo"+i);
+                }
+            }
+        }
+        
+        
+        
+    
+        const btn = document.querySelector(".btn");
+//        console.log(btn);
+        
+        btn.addEventListener("mouseover",function(){
+           alert("버튼 클릭함!!!!") 
+        });
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let today = new Date();
+        console.log(today);
+        
+        let christmas1 = new Date("2022-12-25");
+        let christmas2 = new Date("2022/12/25"); // 문자열로 날짜 지정
+        console.log(christmas1);
+        console.log(christmas2);
+    
+        
+        let offday = new Date(2022,6,6);
+        console.log(offday);
+        
+        // 메서드
+        let month = today.getMonth();   // 월-1 리턴
+        console.log(month+1);
+        let day = today.getDay();   // 일:0 ~ 토:6 목요일은 4
+        console.log(day);
+        let date = today.getDate();
+        console.log(date);
+        let time = today.getTime();
+        console.log(time);
+        
+        // 정보 수정하기
+        console.log(christmas1);
+        christmas1.setFullYear(2023);
+        console.log(christmas1);
+        
+        
+        // Math
+        let rd = parseInt(Math.random()*10); // 0~9 사이값
+        console.log(rd);
+        
+        // string 
+        let str = "hello javascript";
+        console.log(str.charAt(0));
+        console.log(str.indexOf("j"));
+        console.log(str.match("hello"));    //  같은 문자열 찾기
+        console.log(str.substr(3,5));       //  (시작인덱스, 글자수)
+        console.log(str.substring(3,7));    //  (시작인덱스, 끝인덱스) : 끝인덱스 전까지
+        console.log(str.replace("hello","awesome"));
+        console.log(str.split(" "));        //  문자열 기준으로 나누어 배열로 리턴
+        
+    </script>
+</body>
+</html>

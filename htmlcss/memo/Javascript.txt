@@ -264,7 +264,221 @@
 
 
 	2) 내장객체 
+		자바스크립트 엔지에 내장. 바로 생성해서 사용가능.
+		문자(String), 날짜(Date), 배열(Array), 수학(Math), 객체 등이 있다.
+	
+	3) 브라우저 객체 모델 (BOM, Browser Object Medel)
+		브라우저의 계층 구조로 내장되어있는 객체를 말함.
+		window, screen, location, history, navigator 객체 등이 있다.
 
-	3) 브라우저 객체 모델
+	4) 문서 객체 모델 ( DOM, Document Object Model)
+		HTML 문서 구조를 말함
+		최상위 객체는 <html>, 그 하위로 <head><body>
 
-	4) 문서 객체 모델
+	유용한 사이트: Mozilla developer javascript => Reference
+			w3s school => References => javascript	 Reference
+
+
+14. 내장 객체 (Built-in Object)
+	
+	1) 객체 생성 
+		
+		변수명 = new 생성함수();
+	
+	2) Date 객체 
+		: 날짜나 시간 관련 정보 필요할 때 사용
+
+		#1. 객체생성
+		변수 = new Date();
+		변수 = new Date( "연/월/일" );
+		변수 = new Date( 연, 월-1[ ,일, 시간, 분, 초, 밀리초 ]);
+
+		#2. 메서드
+
+		# 정보 가져오기
+		getFullYear()	: 연도 정보
+		getMonth()	: 월 정보 (0~11)
+		getDate()		: 일 정보
+		getDay()		: 요일 (일:0 ~ 토:6)
+		getHour()		: 시간정보
+		getMinutes()	: 분
+		getSeconds()	: 초
+		getMilliseconds()	: 밀리초
+		getTime()		: 1970.1.1.0.0.0 부터 경과한 시간을 밀리초로 리턴
+
+		# 정보 수정
+		setFullYear()	: 연도 수정
+		setMonth()	: 월 수정 (0~11)
+		setDate()		: 일 수정
+		-		: 요일은 날짜 바꾸면 자동으로 바뀜
+		setHour()		: 시간 수정
+		setMinutes()	: 분 수정
+		setSeconds()	: 초 수정
+		setMilliseconds()	: 밀리초 수정
+		setTime()		: 1970.1.1.0.0.0 부터 경과한 시간을 밀리초로 수정
+
+	3) Math 객체
+		수학 관련 기능과 속성을 제공하는 객체 
+		
+		Math.상수
+		Math.메서드()
+
+	4) Array 객체 : 위 내용과 동일
+	5) String 객체
+		: 문자형 데이터를 취급하는 객체
+
+		변수  = "문자열" ;  변수 = '문자열' ;
+		변수 = new String("문자열");
+	
+15. 브라우저 객체 모델 (BOM, Browser Object Medel)
+	: 브라우저에 내장된 객체가 계층적 구조로 이루어져있는 것을 말함.
+
+		        window
+			|
+		--------------------------------------------
+		|	|	|	|	|
+	      document	screen	location	history	navigator
+
+	1) window 객체
+		
+		# 메서드
+		open("URL","새창 이름","새창 옵션든")	: 팝업창
+			* 옵션들 *
+			width : 창 너비
+			height : 창 높이
+			left : 창 x축 좌표
+			top : 창의 y축 좌표
+			scrollbars : 스크롤바 숨김/노출 설정. no/yes
+			location : url 주소 입력하는 영역 숨김/노출 설정.
+			status : 상태 표시줄 영역 숨김/노출 설정
+			toolbars : 도구 상자 영역 숨김/노출 설정
+
+
+		alert (data)			: 경고창 data 보여주기
+		confirm("질문")			: 질문 확인/취소. 확인 : true 리턴, 취소 : false 리턴
+		prompt("질문", "기본답변")		: 입력창 (입력문)
+		moveTo(x, y)			: 지정한 새창의 위치를 이동
+		resizeTo(width, height)		: 창 크기 변경
+		setInterval ( function(){....} , 시간간격)	: 지속적으로 지정한 시간간격을 두고 함수 실행
+		clearInterval()			: 인터벌 삭제
+		setTimeout (function(){....}, 시간간격)	: 지정한 시간 이후 함수 한번 실행
+		clearTimeout()			: 타임아웃 삭제
+
+	2) screen 객체
+		: 사용자의 모니터 정보를 제공하는 객체
+
+		screen.속성;
+
+		width 		: 화면 너비값 리턴
+		height 		: 화면 높이값 리턴
+		availWidth	  	: 작업표시줄 제외한 화면 너비값
+		availHeight 	: 작업표시줄 제외한 화면 높이값
+		colorDepth	: 사용자 모니터가 표현가능한 컬러bit 리턴
+
+	3) location 객체
+		(브라우저 주소창과 관련)
+
+		# 속성과 메서드
+	location.	href	: 주소 영역의 주소를 설정하거나 리턴
+		hostname	: url의 호스트이름을 설정하거나 리턴
+		host 	: url의 호스트이름과 포트번호를 리턴
+		protocal	: 프로토콜 리턴
+		search	: url의 쿼리스트링 리턴 ( 쿼리스트링 = 주소의 ? 뒷부분 )
+		reload()	: 브라우저 새로고침
+
+
+	4) history 객체
+		 : 브라우저에서 뒤로가기 앞으로가기 기능을 코드로 실행시키는 기능 제공
+
+		# 속성과 메서드 
+
+		back()		: 뒤로가기
+		forward()		: 앞으로 가기
+		go(이동숫자)	: 이동 숫자를 -2로 입력하면 두단계이전 페이지로 이동
+				양수로 입력하면 앞으로가기 바로 이동
+
+		
+	5) navigator 객체
+		: 현재 사용자의 브라우저 정보와 운영체제 정보를 제공
+
+		# 속성
+		appVersion	: 사용자 브라우저 버전 정보 리턴
+		language		: 사용자 브라우저가 사용하는 언어. 한글 'ko'
+		product		: 사용자 브라우저의 엔진 이름.
+		platform		: 사용자 컴퓨터 운영체제 정보 제공
+		onLine		: 사용자 온라인 상태 여부 제공
+		userAgent	: 사용자 브라우저와 운영체제의 종합 정보 제공
+
+		Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) 
+		------------ -------------------------------- --------------------------------------------
+		    (1)			(2)			(3)
+
+		Chrome/102.0.0.0 Safari/537.36
+		------------------  --------------
+			(4)	  (5)
+	
+		(1) 기본 플랫폼
+		(2) 운영체제 정보
+		(3) 사용중인 브라우저 엔진 이름
+		(4) 사용중인 브라우저 이름
+		(5) 같은 엔진을 사용중이며 호환 가능한 다른 브라우저	
+
+
+16.  문서 객체 모델 (DOM, Document Object Medel) : DOM 트리
+
+	문서 노드		: 전체 문서를 가르키는 Documnet 객체
+	HTML 요소 노드	: HTML 요소를 가르키는 객체
+	텍스트 노드	: 텍스트를 가르키는 객체
+
+			Document
+			    |
+			html
+			head	body
+		title	meta	h1	p	img	table.........
+				일반 텍스트
+		
+
+	# 노드 객체 가져오는 메서드
+	document.getElementById(id값)		: id 속성값으로 노드 가져오기
+	document.getElementsByTagName(name)	: 태그명으로 노드 찾기 (배열로 리턴)
+	document.getElementsByClassName(name)	: class 속성값으로 노드 가져오기 (배열로 리턴)
+	document.querySelector (css 선택자)		: css선택자로 노드 찾기 (첫번째 찾은 요소만 리턴)
+	document.querySelectorAll (css 선택자)		: css선택자로 노드 찾기 (모든요소 배열로 리턴)
+
+						<h1>hello</h1>
+	# 찾은 HTML 요소 확인/수정
+	요소.innerText  = '대치할 새로운 텍스트' 	: 요소 안의 내용 확인/수정 (태그 미포함)
+	요소.innerHTML = '새로운 html 내용' 		: 요소 안의 내용 확인/수정 (태그 포함)
+	요소.attribute = 새값			: 요소의 속성값 수정
+	요소.setAttribute(속성명, 값)			: 요소의 속성값 메서드로 설정
+
+	# HTML 요소 생성/추가
+	document.createElement(태그명)	: HTML 태그 생성
+	document.appendChild(요소)		: 요소 추가하기
+
+
+
+17. 이벤트 등록
+	1) 이벤트 등록 방법
+		addEventListener() 를 이용하여 요소에 이벤트 등록
+
+		타겟.addEventListener("이벤트종류" , function(){ ..... })
+			
+
+	2 )이벤트 종류
+	load 		: 로딩이 완료 되었을 때
+	resize		: 윈도우창 크기 변경되었을 때
+
+	keydown		: 키보드를 눌렀을 때
+	keyup		: 키보드를 떼었을 때
+	
+	change		:
+	click		: 클릭했을 때
+	focus		: 초점이 맞춰졌을 때
+	mousedown	: 마우스 버튼을 눌렀을 때
+	mouseup		: 마우스 버튼을 떼었을 때
+	mouseover	: 마우스가 요소에 이동했을 때
+	mouseout		: 마우스가 바깥으로 나갔을 때
+	mousemove	: 마우스가 움직일 때
+	
+

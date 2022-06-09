@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>                                        
+        .box {
+            width : 100px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> hello</h1>
+    
+    <script>
+        const newTag = document.createElement('div');
+        newTag.innerText = 'JavaScript';
+        newTag.setAttribute("class","box");
+        newTag.style.background="magenta";
+        newTag.style.color = "white";
+        
+        document.body.appendChild(newTag);
+    
+    
+    
+    </script>
+</body>
+</html>
